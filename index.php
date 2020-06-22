@@ -5,7 +5,30 @@ include ("controller/controller.php");
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+// NAVIGATION
+if (isset($_GET["navigation"]))
+{
+    if ($_GET["navigation"] == "inscription")
+    {
+    require "view/inscription.php";
+    }
+
+    if ($_GET["navigation"] == "connexion")
+    {
+    require "view/connexion.php";
+    }
+    if ($_GET["navigation"] == "apropos")
+    {
+    require "view/onePage.php";
+    }
+}
+  
+
+
 // INSCRIPTION
+
+
+
 if (isset($_POST["pseudo"]) && isset($_POST["pass"])
 && isset($_POST["pass1"])&& isset($_POST["email"]) && isset($_POST["groupe"]))
     {

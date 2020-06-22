@@ -8,14 +8,14 @@
         <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09">
             <ul class="navbar-nav active">
             
-            <li class="nav-item"><a class="nav-link" href="http://localhost/sitePersoMVC/index.php#accueil">Accueil </a></li>
-            <li class="nav-item"><a class="nav-link" href="http://localhost/sitePersoMVC/index.php#accueil">Chat </a></li>
-            <li class="nav-item"><a class="nav-link" href="http://localhost/sitePersoMVC/index.php#accueil">Profil </a></li>
+            <li class="nav-item"><a class="nav-link" href="index.php">Accueil </a></li>
+            <li class="nav-item"><a class="nav-link" href="index.php?action=chat">Chat </a></li>
+            <li class="nav-item"><a class="nav-link" href="index.php?action=profil">Profil </a></li>
             
            
           
-            <li class="nav-item"><a class="nav-link" href="http://localhost/sitePersoMVC/view/deconnexion.php" > Deconnexion </a>  </li>
-            <li class="nav-item"><a class="nav-link" href="http://localhost/sitePersoMVC/view/deconnexion.php" > Livre D'or</a>  </li>
+            <li class="nav-item"><a class="nav-link" href="index.php?action=deco" > Deconnexion </a>  </li>
+           <!-- <li class="nav-item"><a class="nav-link" href="http://localhost/sitePersoMVC/view/deconnexion.php" > Livre D'or</a>  </li> -->
           
            
             

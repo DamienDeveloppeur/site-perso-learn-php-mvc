@@ -6,7 +6,7 @@ include('./model/model.php');
 // AFFICHER ONEPAGE
 function getOnePage ()
 {
-    require('view/onePage.php');
+    require_once('view/onePage.php');
 }
 // AFFICHE LE FORMULAIRE D'INSCRIPTION
 function getIndexEspaceMembre()

@@ -37,7 +37,7 @@
         <?php include("C:/wamp64/www/sitePersoMVC/include/header1.php"); ?>
         
         <?php 
-    session_start();
+    
   	
     // Suppression des variables de session et de la session
     $_SESSION = array();

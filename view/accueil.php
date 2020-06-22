@@ -2,7 +2,7 @@
   <!-- ~~~~~~~~~~~~ -->
     <!-- PAGE ACCUEIL-->
     <!-- ~~~~~~~~~~~~ -->
-    <section class="grandediv white" style="background-image: url(../public/images/computer-336628.jpg);" id="accueil" data-stellar-background-ratio="0.5">
+    <section class="grandediv white" style="background-image: url(./public/images/computer-336628.jpg);" id="accueil" data-stellar-background-ratio="0.5">
         <div class="container" id="accueil">
             <div class="row intro-text align-items-center justify-content-center">
               <div class="col-md-10 text-center">
@@ -24,7 +24,7 @@
   <section class="d-flex justify-content-center align-items-center  text-center" id="apropos" style="margin-top:60px" >
   
   <div class="col-5 d-flex justify-content-end">
-    <img src="../public/images/13686559_10209055411596232_1292495818819601662_n.jpg" class="img-thumbnail" alt="Cinque Terre"> 
+    <img src="./public/images/13686559_10209055411596232_1292495818819601662_n.jpg" class="img-thumbnail" alt="Cinque Terre"> 
   </div>
   <div class="col-7">
     <h1 class="font-italic font-weight-bolder">A propos de moi</h1>
