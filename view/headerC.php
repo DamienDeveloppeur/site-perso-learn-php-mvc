@@ -1,25 +1,27 @@
 <header>
-    <div id="logo">
-    <a href="http://localhost/sitePersoMVC/index.php#accueil"> <img src="./public/images/Logo_OpenClassrooms.png"> </a>
-    </div>
-    <nav>
-        <div id="accueilnav">
-        <a href="http://localhost/sitePersoMVC/index.php#accueil" class="nonelink" >Accueil </a>
+<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light active" id="pb-navbar">
+
+    <div class="container">
+ 
+           
+        
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09">
+            <ul class="navbar-nav active">
+            
+            <li class="nav-item"><a class="nav-link" href="http://localhost/sitePersoMVC/index.php#accueil">Accueil </a></li>
+            <li class="nav-item"><a class="nav-link" href="http://localhost/sitePersoMVC/index.php#accueil">Chat </a></li>
+            <li class="nav-item"><a class="nav-link" href="http://localhost/sitePersoMVC/index.php#accueil">Profil </a></li>
+            
+           
+          
+            <li class="nav-item"><a class="nav-link" href="http://localhost/sitePersoMVC/view/deconnexion.php" > Deconnexion </a>  </li>
+            <li class="nav-item"><a class="nav-link" href="http://localhost/sitePersoMVC/view/deconnexion.php" > Livre D'or</a>  </li>
+          
+           
+            
+            </ul>
         </div>
-        <div id="lien1">
-        <a href="http://localhost/sitePersoMVC/index.php?action=chat" class="nonelink" >chat </a>
-        </div>
-        <div id="lien2">
-        <a href="http://localhost/sitePersoMVC/index.php?action=profil" class="nonelink" >Profil </a>
-        </div>
-        <div id="lien3">
-        <a href="http://localhost/sitePersoMVC/view/deconnexion.php" class="nonelink" >deconnexion </a>      
-        </div>
-        <div id="lien3">
-        <a href="http://localhost/sitePersoMVC/VUE/index.php" class="nonelink" >Blog </a>      
-        </div>
-        <div id="lien3">
-        <a href="http://localhost/sitePersoMVC/livreDor/indexlivreDor.php" class="nonelink" >Livre D'or</a>      
-        </div>
-    </nav>
+</div>
+
+</nav>
 </header>
