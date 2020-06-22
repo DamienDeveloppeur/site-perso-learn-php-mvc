@@ -171,7 +171,7 @@
 
 
 	// Page Nav
-	var clickMenu = function() {
+/*	var clickMenu = function() {
 
 		$('.navbar-nav a:not([class="external"])').click(function(event){
 
@@ -191,7 +191,7 @@
 		});
 
 
-	};
+	};*/
 
 	// Reflect scrolling in navigation
 	var navActive = function(section) {

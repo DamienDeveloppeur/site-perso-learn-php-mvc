@@ -1,15 +1,8 @@
 
-
-  <!-- ~~~~~~~~~~~~ -->
-    <!-- NAVBAR-->
-    <!-- ~~~~~~~~~~~~ -->
-
-    
-    <section class="grandediv white" style="background-image: url(./public/images/computer-336628.jpg);" id="accueil" data-stellar-background-ratio="0.5">
-
   <!-- ~~~~~~~~~~~~ -->
     <!-- PAGE ACCUEIL-->
     <!-- ~~~~~~~~~~~~ -->
+    <section class="grandediv white" style="background-image: url(./public/images/computer-336628.jpg);" id="accueil" data-stellar-background-ratio="0.5">
         <div class="container" id="accueil">
             <div class="row intro-text align-items-center justify-content-center">
               <div class="col-md-10 text-center">

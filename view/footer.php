@@ -1,6 +1,7 @@
 <footer>
-    <div id="leftF">
-    <!-- Insertion d'un logo -->
+    <!-- 
+    
+    
     </div>
     <div id="centerF">
           <p>
@@ -14,4 +15,5 @@
           he plus c kwa le lien lol
           </p>
     </div>
+-->
 </footer>

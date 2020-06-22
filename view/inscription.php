@@ -40,56 +40,49 @@ if(!isset($_SESSION)){
       
 </head>
 	<body>
-      	<div id="indexEM">
+      	
         <?php
 if (isset($_SESSION['id']) && isset($_SESSION["pseudo"]))
 {
-     require '../include/headerC.php';
+     require 'headerC.php';
      echo 'Mais, vous êtes déjà inscrit, comment êtes vous arrivez ici ?';  
      echo 'WTF ?';     
 }
 else 
 {
-        require '../include/header.php';
+
+        require 'header.php';
       ?>
-        <div class="h1center">	
+        <section class="grandediv white" style="background-image: url(../public/images/photography-of-night-sky-733475.jpg);" data-stellar-background-ratio="0.5">
+      
+
+      <div id="formulaireI" class="marginTop marginBottom" >
+      <div class="h1center inscriptionTitle">	
       <h1>Inscription</h1>
         </div>
-	<p></p>
-      
-      <div id="formulaireI">
-		<form method="POST" action="http://localhost/sitePersoMVC/index.php">
-                        <div class="label">
-            <label>Votre pseudo</label>
-                        </div>
-                        <div class="input">
+		<form method="POST" action="http://localhost/sitePersoMVC/index.php">   
+            <label>Votre pseudo</label>  
             <input autofocus autocomplete = off type="text" name="pseudo" class="input1">
-                        </div>
-                  
                         <br>
-                        <div class="label">
             <label>Votre mot de passe<br> (entre trois et huit lettres ou chiffres)</label>
-                        </div>
-                        <div class="input">
+
             <input autocomplete = off type="password" name="pass" class='input1'>
-                        </div> 
-            <br>
-                 
-                        <div class="label">
+                      
+            <br>    
         <label>Répétez votre mot de passe</label>
-                        </div>
-                        <div class="input">
+                      
+                        
             <input autocomplete = off type="password" name="pass1" class="input1">
-                        </div>
+                       
                                <br>
                   
-                        <div class="label">
+                        
             <label>Votre email</label>
-                        </div>
-                        <div class="input">
+                       
+                       
             <input autocomplete = off type="text" name="email" class="input1">
                          <br>
-                         </div>
+                        
                         <br>
                        <label>Votre statut : </label>
             <select name="groupe">
@@ -103,13 +96,16 @@ else
             <input type="submit" value="Valider" class="buttonvalider"/>
 		</form>
       </div> 
-      
+    
+  
+    
+    </section>
       <p>
        
       </p> 
   <?php
 }
   ?>
-  </div>
+
 	</body>
 </html>

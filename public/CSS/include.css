@@ -98,18 +98,21 @@ footer img {
 
 /* FORMULAIRE */
 #formulaireI{
-    border : solid;
+    border : solid 2px white;
     border-radius : 15px;
     width : 300px;
-    height : 520px;
+    
     margin-left : auto;
     margin-right : auto;
     text-align : center;
-    background-color: rgb(145, 107, 255);
+    background-color: transparent;
     font-family : "Brush Script MT";
     font-size : 26px;
 }
-
+.inscriptionTitle
+{
+    color : black;
+}
 .label{
     display:flex;
     justify-content : center;
@@ -152,17 +155,32 @@ footer img {
 
 /* CONNEXION */
 #connexionF {
-    border : solid;
+    border : solid 2px white;
     border-radius : 14px;
     width : 500px;
     text-align : center;
     margin-left : auto;
     margin-right : auto;
-    background-color: rgb(145, 107, 255);
+    background-color: transparent;
     font-family : "Brush Script MT";
-    font-size : 26px
+    font-size : 26px;
+    color : white;
 }
 
 #connexion h1{
     text-align : center;
+    color : white
+}
+
+.backgroundCommun
+{
+    background-image: url(../public/images/photography-of-night-sky-733475.jpg);
+}
+.marginTop
+{
+    margin-top :200px;
+}
+.marginBottom
+{
+    margin-bottom : 200px;
 }
