@@ -339,7 +339,9 @@
 
       <hr>
   </section>
+<section id="decouvrir">
 
+</section>
 
 <!-- ~~~~~~~~~~~~ -->
     <!-- CONTACT -->

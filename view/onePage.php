@@ -6,6 +6,8 @@ if(!isset($_SESSION)){
 <!DOCTYPE html>
 <html>
 <head>
+<title>Site personnel</title>
+<meta charset="utf-8" />
 
     <link rel="stylesheet" href="./public/css/bootstrap-grid.css">
     <link rel="stylesheet" href="./public/css/bootstrap-grid.min.css">
@@ -20,14 +22,7 @@ if(!isset($_SESSION)){
     
    
 
-
-    <!-- 
-    <link rel="stylesheet" media="screen and (max-width: 1350px)" href="./public/CSS/stylesonepage.css" />
-    <link rel="stylesheet" media="screen and (max-width: 600px)" href="./public/CSS/stylesonepage.css" />
-    <link rel="stylesheet" media="screen and (max-width: 1900px)" href="./public/CSS/stylesonepage.css" />
--->
-    <meta charset="utf-8" />
-    <title>Site personnel</title>
+    
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -51,10 +46,10 @@ if(!isset($_SESSION)){
         <?php
 if (isset($_SESSION["id"]) && isset($_SESSION["pseudo"]))
     {
-    require "./include/headerC.php";
-    require "./include/accueil.php";
+    require "headerC.php";
+    require "accueil.php";
    
-     require "./include/footer.php"; ?>
+     require "footer.php"; ?>
     
    
     
@@ -66,14 +61,14 @@ if (isset($_SESSION["id"]) && isset($_SESSION["pseudo"]))
 else {
         ?>
     <!--HEADER FLOTTANT-->
-   <?php include("./include/header.php"); 
+   <?php include("header.php"); 
 
 
-    include("./include/accueil.php"); ?>
+    include("accueil.php"); ?>
 
 <!-- FOOTER -->
 
-<?php require "./include/footer.php"; 
+<?php require "footer.php"; 
 
 
 }

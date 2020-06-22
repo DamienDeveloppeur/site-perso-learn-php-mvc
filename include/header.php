@@ -6,17 +6,21 @@
            
         
         <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09">
-            <ul class="navbar-nav">
+            <ul class="navbar">
             
-            <li class="nav-item" id="accueilnav"><a href="index.php" class="nonelink">Accueil </a></li>
-            <li class="nav-item"> <a href="index#decouvrir" class="nonelink">Decouvrir les fonctionnalités back</a></li>
-            <li class="nav-item"> <a href="index#decouvrir" class="nonelink">Mon CV</a></li>
-            <li class="nav-item"><a href="http://localhost/sitePersoMVC/view/inscription.php" class="nonelink">Inscription </a></li>
-            <li class="nav-item"><a href="http://localhost/sitePersoMVC/view/connexion.php" class="nonelink">Connexion </a>  </li>
+            <li class="nav-item"><a class="nav-link" href="index.php" >Accueil </a></li>
+            <li class="nav-item"> <a class="nav-link" href="#apropos" >Mon CV</a></li>
+            <li class="nav-item"> <a class="nav-link" href="#decouvrir" >Decouvrir les fonctionnalitées back</a></li>
+
+            <li class="nav-item"><a class="nav-link" href="../sitePersoMVC/view/inscription.php" >Inscription </a></li>
+            <li class="nav-item"><a class="nav-link" href="../view/connexion.php" >Connexion </a>  </li>
+<li class="nav-item"><a class="nav-link" href=".."
+          
            
             
             </ul>
         </div>
 </div>
+
 </nav>
 </header>
