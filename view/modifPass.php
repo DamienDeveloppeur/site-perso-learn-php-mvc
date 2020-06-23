@@ -37,7 +37,7 @@ if(!isset($_SESSION)){
     <script src="./public/css/vendor/jquery.waypoints.min.js"></script>
     <script src="./public/css/vendor/custom.js"></script>
     <meta charset="utf-8" />
-    <title>Site personnel</title>
+    <title>Modif du pass</title>
 </head>
 <body>
 
@@ -46,36 +46,22 @@ if(!isset($_SESSION)){
     {
     require "headerC.php";
     ?>
-    <section class="grandediv white" style="background-image: url(./public/images/photography-of-night-sky-733475.jpg)"data-stellar-background-ratio="0.5">
+    <section class="grandediv white backgroundCommun" style="background-image: url(./public/images/photography-of-night-sky-733475.jpg)" data-stellar-background-ratio="0.5">
       <div id="profil" class=" marginTop text-center">
 
-    <h1>Bienvenue sur votre espace personnel gros troll </h1> 
-  <p> Alors on est venu ici pour troller OKLM ? </p>
+    <h1>Bienvenue sur la page pour modifier votre mot de passe</h1> 
+  
+    <form method="POST" action="index.php?action=newpass">
+				
+        <label>Votre ancien mot de passe</label><br>	
+        <input name="expass" type="text"> <br>		
+        <label>Votre mot de passe</label>
+        <input type="password" name="newpass"> <br>
+					
+				<input type="submit" value="connexion"/>
+				  </form>
   <?php
-    // AFFICHER LES DONNEES
-    while ($donnees = $reponse->fetch())
-    {  
-        echo'Pseudo :' .$donnees["pseudo"] . '<br>';
-    echo 'Adresse mail :' . $donnees["email"].'<br>';
-        echo 'Inscrit le :'. $donnees["date_inscription"];
-        echo'<br><br><br>';
-        echo 'Avatar :'.'<img src="./public/avatar/'. $donnees['avatar'].'"id="logoprofil"/>';
-      }
-        ?>
-      <h2>Modifier votre avatar !</h2>
-        <p> Et ouais maggle t'as vue tout ce que 
-        je peux faire en codant ! </p>
-
-      <form method ="POST" enctype="multipart/form-data" action="index.php?action=profil">
-        <input type="file" name="image"/>
-        <input type ="submit" value ="Valider"/>
-      </form>
-
-      <h2>Modifier votre mot de pass !</h2>
-      <a href="index.php?navigation=modifPass"> Cliquez ici pour modifier le mot de passe !</a>
-    <?php
-
-
+ 
 
  require "footer.php"; ?>
 

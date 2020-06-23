@@ -23,13 +23,16 @@ if (isset($_GET["navigation"]))
     }
     if ($_GET["navigation"] == "chat")
     {
-     
           $reponse = showMessageChat();
-   
     }
     if ($_GET["navigation"] == "profil")
     {
         showDonneesMembre($_SESSION["pseudo"]);
+    }
+    if ($_GET["navigation"] == "modifPass")
+    {
+
+       require "view/modifPass.php";
     }
 }
 else if (!isset($_GET["navigation"]) && (!isset($_GET["action"])))
@@ -84,6 +87,14 @@ if (isset($_GET["action"]))
     {
       
         deconnexion();
+    }
+    if ($_GET["action"] == 'newpass')
+    {
+        if (isset($_POST["expass"]) && isset($_POST["newpass"]))
+            {
+              modifPass($_SESSION["pseudo"], $_POST["expass"], $_POST["newpass"]);
+               
+            }  
     }
 }   
 // EXECUTION PAR DEFAUT

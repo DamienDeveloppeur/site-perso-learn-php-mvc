@@ -24,7 +24,7 @@ function getIndexEspaceMembre()
 // REGISTER
 function register ($pseudoRegister, $passRegister, $emailRegister, $IDgroupeRegister)
 {
-    $register = new Member();
+    $register = new Register();
   $registers = $register->entryDonneesRegister($pseudoRegister, $passRegister, $emailRegister, $IDgroupeRegister);
    include("view/connexion.php");
 }
@@ -32,7 +32,7 @@ function register ($pseudoRegister, $passRegister, $emailRegister, $IDgroupeRegi
 //CONNEXION
 function connexion ($passConnexion, $pseudoConnexion)
 {
-    $connexion = new Member();
+    $connexion = new Register();
     $connex = $connexion->verifyPass($pseudoConnexion, $passConnexion);
        
        // require "view/onePage.php";
@@ -47,6 +47,11 @@ function deconnexion()
     //sessionDestroy();
     require'view/onePage.php';
 }
+
+
+
+
+
 // PAGE DE PROFIL
 //~~~~~~~~~~~~~~~~~~~~//
 
@@ -65,6 +70,19 @@ function changeAvatar ($adress1, $sessionID)
    $adress1 =  $changeAvatar->envoiFichier ($sessionID);
    $adress1 =  $changeAvatar->updateAvatar ($adress1, $sessionID);
 }
+// change pass
+function modifPass( $pseudoConnexion, $expass, $newpass)
+{
+   
+    $changePass = new Member();
+    $passChange = $changePass->updatePass( $pseudoConnexion, $expass, $newpass);
+    
+    //showDonneesMembre($_SESSION["pseudo"]);
+}
+
+
+
+
 
 // CHAT //
 //~~~~~~~~~~~~~~~~~~~~//
