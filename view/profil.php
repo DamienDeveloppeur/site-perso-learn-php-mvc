@@ -46,9 +46,12 @@ if(!isset($_SESSION)){
     {
     require "headerC.php";
     ?>
+    <section class="grandediv white" style="background-image: url(./public/images/photography-of-night-sky-733475.jpg)"data-stellar-background-ratio="0.5">
+      <div id="profil" class=" marginTop text-center">
+
     <h1>Bienvenue sur votre espace personnel gros troll </h1> 
-<p> Alors on est venu ici pour troller OKLM ? </p>
-<?php
+  <p> Alors on est venu ici pour troller OKLM ? </p>
+  <?php
     // AFFICHER LES DONNEES
     while ($donnees = $reponse->fetch())
     {  
@@ -63,10 +66,11 @@ if(!isset($_SESSION)){
         <p> Et ouais maggle t'as vue tout ce que 
         je peux faire en codant ! </p>
 
-        	<form method ="POST" enctype="multipart/form-data">
-		<input type="file" name="image"/>
-		<input type ="submit" value ="Valider"/>
-	</form>
+      <form method ="POST" enctype="multipart/form-data" action="index.php?action=profil">
+        <input type="file" name="image"/>
+        <input type ="submit" value ="Valider"/>
+      </form>
+
     <?php
 
 
@@ -76,6 +80,7 @@ if(!isset($_SESSION)){
 <?php
 }
 ?>
+</div>
 </div>
 </body>
 </html>

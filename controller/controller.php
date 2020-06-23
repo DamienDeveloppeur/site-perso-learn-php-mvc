@@ -44,7 +44,7 @@ function deconnexion()
 {
     session_destroy();
     $deconnexion = new Member();
-    sessionDestroy();
+    //sessionDestroy();
 
 }
 // PAGE DE PROFIL
