@@ -56,7 +56,7 @@ else
         <section class="grandediv white" style="background-image: url(./public/images/photography-of-night-sky-733475.jpg);height : 1000px;" data-stellar-background-ratio="0.5">
       
 
-      <div id="formulaireI" class="marginTop marginBottom" >
+      <div id="formulaireI" class="marginTop text-center" >
       <div class="h1center inscriptionTitle">	
       <h1>Inscription</h1>
         </div>

@@ -21,8 +21,24 @@ if (isset($_GET["navigation"]))
     {
     require "view/onePage.php";
     }
+    if ($_GET["navigation"] == "chat")
+    {
+    require "view/chat.php";
+    }
+    if ($_GET["navigation"] == "profil")
+    {
+        showDonneesMembre($_SESSION["pseudo"]);
+    }
+
+
+
 }
-  
+else if (!isset($_GET["navigation"]))
+{
+
+    getOnePage ();
+}
+
 
 
 // INSCRIPTION
@@ -33,11 +49,14 @@ if (isset($_POST["pseudo"]) && isset($_POST["pass"])
 && isset($_POST["pass1"])&& isset($_POST["email"]) && isset($_POST["groupe"]))
     {
        register($_POST["pseudo"], $_POST["pass"], $_POST["email"], $_POST["groupe"]);  
+    
     }
 // CONNEXION
 if (isset($_POST["pseudo"]) && isset($_POST["pass"]))
     {
+     
         connexion ($_POST["pseudo"], $_POST["pass"]);
+    
     }
 
 // DONNEES TRANSMISES PAR URL
@@ -47,6 +66,11 @@ if (isset($_GET["action"]))
     // PROFIL / CHANGER AVATAR
     if ($_GET["action"] == "profil")
     {
+        ?>
+        <script>
+        alert("test");
+        </script>
+        <?php
 
         showDonneesMembre($_SESSION["pseudo"]);
         changeAvatar ($_SESSION["id"].'.'. $extensionImage, $_SESSION["id"]);
@@ -68,13 +92,13 @@ if (isset($_GET["action"]))
             messageChat($_SESSION["pseudo"], $_POST["message"]);
         }  
     }
+    if ($_GET["action"] == 'deco')
+    {
+      
+        deconnexion();
+    }
 }   
 // EXECUTION PAR DEFAUT
- else
-     {
-    getOnePage ();
-     }
-
 
 
 

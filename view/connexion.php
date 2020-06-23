@@ -49,7 +49,7 @@ else
 {
 			include("header.php");
 			?>
-		<section class="grandediv whitee" style="background-image: url(./public/images/photography-of-night-sky-733475.jpg)"data-stellar-background-ratio="0.5">
+		<section class="grandediv white" style="background-image: url(./public/images/photography-of-night-sky-733475.jpg)"data-stellar-background-ratio="0.5">
 			
 			<div id="connexionF" class="marginTop" >
 			<h1>Connexion</h1>

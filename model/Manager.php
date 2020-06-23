@@ -6,7 +6,7 @@ class Manager {
         {
             try
             {
-                $bdd = new PDO('mysql:host=localhost;dbname=espace membres;
+                $bdd = new PDO('mysql:host=localhost;dbname=espacemembres;
                 charset=utf8', 'root', '');
                 return $bdd;
             }

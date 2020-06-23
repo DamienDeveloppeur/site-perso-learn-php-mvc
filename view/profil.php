@@ -6,17 +6,17 @@ if(!isset($_SESSION)){
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="../public/CSS/include.css">
-  <link rel="stylesheet" href="../public/CSS/bootstrap-grid.css">
-    <link rel="stylesheet" href="../public/CSS/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="../public/CSS/bootstrap-reboot.css">
-    <link rel="stylesheet" href="../public/CSS/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="../public/CSS/bootstrap.css">
-    <link rel="stylesheet" href="../public/CSS/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/CSS/style.css">
-    <link rel="stylesheet" href="../public/CSS/flexslider.css">
-    <link rel="stylesheet" href="../public/CSS/animate.css">
-    <link rel="stylesheet" href="../public/CSS/magnific-popup.css">
+<link rel="stylesheet" href="./public/CSS/include.css">
+  <link rel="stylesheet" href="./public/CSS/bootstrap-grid.css">
+    <link rel="stylesheet" href="./public/CSS/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./public/CSS/bootstrap-reboot.css">
+    <link rel="stylesheet" href="./public/CSS/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="./public/CSS/bootstrap.css">
+    <link rel="stylesheet" href="./public/CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/CSS/style.css">
+    <link rel="stylesheet" href="./public/CSS/flexslider.css">
+    <link rel="stylesheet" href="./public/CSS/animate.css">
+    <link rel="stylesheet" href="./public/CSS/magnific-popup.css">
     
    
 
@@ -27,15 +27,15 @@ if(!isset($_SESSION)){
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-  <script src="../public/css/vendor/jquery.min.js"></script>
+  <script src="./public/css/vendor/jquery.min.js"></script>
   
-    <script src="../public/css/vendor/popper.min.js"></script>
-    <script src="../public/css/vendor/bootstrap.min.js"></script>
+    <script src="./public/css/vendor/popper.min.js"></script>
+    <script src="./public/css/vendor/bootstrap.min.js"></script>
     
-    <script src="../public/css/vendor/jquery.easing.1.3.js"></script>
-    <script src="../public/css/vendor/jquery.stellar.min.js"></script>
-    <script src="../public/css/vendor/jquery.waypoints.min.js"></script>
-    <script src="../public/css/vendor/custom.js"></script>
+    <script src="./public/css/vendor/jquery.easing.1.3.js"></script>
+    <script src="./public/css/vendor/jquery.stellar.min.js"></script>
+    <script src="./public/css/vendor/jquery.waypoints.min.js"></script>
+    <script src="./public/css/vendor/custom.js"></script>
     <meta charset="utf-8" />
     <title>Site personnel</title>
 </head>
@@ -44,7 +44,7 @@ if(!isset($_SESSION)){
 <?php
         if (isset($_SESSION["id"]) && isset($_SESSION["pseudo"]))
     {
-    require "C:/wamp64/www/sitePersoMVC/include/header1C.php";
+    require "headerC.php";
     ?>
     <h1>Bienvenue sur votre espace personnel gros troll </h1> 
 <p> Alors on est venu ici pour troller OKLM ? </p>
@@ -71,7 +71,7 @@ if(!isset($_SESSION)){
 
 
 
- require "C:/wamp64/www/sitePersoMVC/include/footer.php"; ?>
+ require "footer.php"; ?>
 
 <?php
 }

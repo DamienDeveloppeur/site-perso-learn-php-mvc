@@ -35,14 +35,17 @@ function connexion ($passConnexion, $pseudoConnexion)
     $connexion = new Member();
     $connex = $connexion->verifyPass($pseudoConnexion, $passConnexion);
        
-        require "./view/onePage.php";
+       // require "view/onePage.php";
+   
 }
 
 //DECONNEXION
-function deconnexion ()
+function deconnexion()
 {
+    session_destroy();
     $deconnexion = new Member();
     sessionDestroy();
+
 }
 // PAGE DE PROFIL
 //~~~~~~~~~~~~~~~~~~~~//
@@ -52,7 +55,7 @@ function showDonneesMembre($sessionPseudo)
 {
     $showDonneesMembre = new Member();
     $reponse = $showDonneesMembre->lireDonneesMembre ($sessionPseudo);
-    require "C:/wamp64/www/sitePersoMVCobjet/view/profil.php";
+    require_once "view/profil.php";
 }
 
 // CHANGER AVATAR
@@ -77,7 +80,7 @@ function showMessageChat()
 {
     $showMessageChat = new Chat();
     $reponse =  $showMessageChat->jointureChat();
-    require "C:/wamp64/www/sitePersoMVCobjet/view/chat.php";
+    require "view/chat.php";
 }
 
 // LIVRE D'OR //

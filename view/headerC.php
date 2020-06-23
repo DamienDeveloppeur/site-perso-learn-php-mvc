@@ -9,8 +9,8 @@
             <ul class="navbar-nav active">
             
             <li class="nav-item"><a class="nav-link" href="index.php">Accueil </a></li>
-            <li class="nav-item"><a class="nav-link" href="index.php?action=chat">Chat </a></li>
-            <li class="nav-item"><a class="nav-link" href="index.php?action=profil">Profil </a></li>
+            <li class="nav-item"><a class="nav-link" href="index.php?navigation=chat">Chat </a></li>
+            <li class="nav-item"><a class="nav-link" href="index.php?navigation=profil">Profil </a></li>
             
            
           

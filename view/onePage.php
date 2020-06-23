@@ -59,16 +59,16 @@ if (isset($_SESSION["id"]) && isset($_SESSION["pseudo"]))
    <?php 
     }
 else {
-        ?>
-    <!--HEADER FLOTTANT-->
-   <?php include("header.php"); 
+       
+   
+   include("header.php"); 
 
 
-    include("accueil.php"); ?>
+    include("accueil.php");
 
-<!-- FOOTER -->
 
-<?php require "footer.php"; 
+
+ require "footer.php"; 
 
 
 }
