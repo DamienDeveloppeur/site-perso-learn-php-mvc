@@ -62,7 +62,7 @@ class Register extends Manager
                         {
                             if ($solution = array_search($pseudo, $listpseudo))
                             {
-                            echo 'pseudo déjà utilisé recommence sale troll ! <br>';
+                            echo 'pseudo déjà utilisé  ! <br>';
                             }
                                 else
                                 {

@@ -62,7 +62,7 @@ class Member extends Manager
                             }
                             else
                             {
-                                echo 'MDR DE TURBO LOL L\'EXTENSION N\'EST PAS BONNE';
+                                echo ' L\'EXTENSION N\'EST PAS BONNE';
                             }
                     }
                     else 
