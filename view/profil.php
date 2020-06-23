@@ -49,8 +49,8 @@ if(!isset($_SESSION)){
     <section class="grandediv white" style="background-image: url(./public/images/photography-of-night-sky-733475.jpg)"data-stellar-background-ratio="0.5">
       <div id="profil" class=" marginTop text-center">
 
-    <h1>Bienvenue sur votre espace personnel gros troll </h1> 
-  <p> Alors on est venu ici pour troller OKLM ? </p>
+    <h1>Bienvenue sur votre espace personnel </h1> 
+  <p> </p>
   <?php
     // AFFICHER LES DONNEES
     while ($donnees = $reponse->fetch())
@@ -63,8 +63,8 @@ if(!isset($_SESSION)){
         echo 'Avatar :'.'<img src="./public/avatar/'. $donnees['avatar'].'"id="logoprofil"/>';
       }
         ?>
-      <h2>Modifier votre avatar !</h2>
-        <p> Et ouais maggle t'as vue tout ce que 
+      <h2>Modifiez votre avatar !</h2>
+        <p> Et ouais t'as vue tout ce que 
         je peux faire en codant ! </p>
 
       <form method ="POST" enctype="multipart/form-data" action="index.php?action=profil">
