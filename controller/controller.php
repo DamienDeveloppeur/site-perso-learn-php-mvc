@@ -1,5 +1,11 @@
 <?php
-include('./model/model.php');
+
+function chargerClasse($classe)
+{
+  require './model/'. $classe . '.php'; // On inclut la classe correspondante au paramètre passé.
+}
+spl_autoload_register('chargerClasse'); 
+
 // GETTEUR VIEW //
 //~~~~~~~~~~~~~~~~~~~~//
 
@@ -18,22 +24,25 @@ function getIndexEspaceMembre()
 // REGISTER
 function register ($pseudoRegister, $passRegister, $emailRegister, $IDgroupeRegister)
 {
-   $register = entryDonneesRegister($pseudoRegister, $passRegister, $emailRegister, $IDgroupeRegister);
+    $register = new Member();
+  $registers = $register->entryDonneesRegister($pseudoRegister, $passRegister, $emailRegister, $IDgroupeRegister);
    include("view/connexion.php");
 }
 
 //CONNEXION
 function connexion ($passConnexion, $pseudoConnexion)
 {
-    $isPasswordCorrect = verifyPass($pseudoConnexion, $passConnexion);
+    $connexion = new Member();
+    $connex = $connexion->verifyPass($pseudoConnexion, $passConnexion);
        
-        include("view/onePage.php");
+        require "./view/onePage.php";
 }
 
 //DECONNEXION
 function deconnexion ()
 {
-    sessionDestroy ();
+    $deconnexion = new Member();
+    sessionDestroy();
 }
 // PAGE DE PROFIL
 //~~~~~~~~~~~~~~~~~~~~//
@@ -41,28 +50,48 @@ function deconnexion ()
 //LIRE DONNEES MEMBRE
 function showDonneesMembre($sessionPseudo)
 {
-    $reponse = lireDonneesMembre ($sessionPseudo);
-    require "view/profil.php";
+    $showDonneesMembre = new Member();
+    $reponse = $showDonneesMembre->lireDonneesMembre ($sessionPseudo);
+    require "C:/wamp64/www/sitePersoMVCobjet/view/profil.php";
 }
 
 // CHANGER AVATAR
 function changeAvatar ($adress1, $sessionID)
 {
-    envoiFichier ($sessionID);
-    updateAvatar ($adress1, $sessionID);
+    $changeAvatar = new Member();
+    $changeAvatar->envoiFichier ($sessionID);
+    $changeAvatar->updateAvatar ($adress1, $sessionID);
 }
 
 // CHAT //
 //~~~~~~~~~~~~~~~~~~~~//
 //ENTRER ET AFFICHER LE MESSAGE
-function messageChat($pseudoSession, $messageChat)
+function messageChat($pseudoSession, $message)
 {
-    $reponse = addMessage ($pseudoSession, $messageChat);
-    require "view/chat.php";
+    $messageChat = new Chat();
+   $addmessage = $messageChat->addMessage($pseudoSession, $message);
+    
     
 }
 function showMessageChat()
 {
-    $reponse = jointureChat();
-    require "view/chat.php";
+    $showMessageChat = new Chat();
+    $reponse =  $showMessageChat->jointureChat();
+    require "C:/wamp64/www/sitePersoMVCobjet/view/chat.php";
+}
+
+// LIVRE D'OR //
+//~~~~~~~~~~~~~~~~~~~~//
+function messageLivredor()
+{
+    $messageLivredor = new MessageManager();
+    $reponse = $messageLivredor->showMessageLivredor();
+    
+    require 'view/livredor.php';
+}
+function addMessageLivredor($pseudolivredor, $messagelivredor)
+{
+    $addMessageLivredor = new MessageManager();
+    $addMessageLivredor->addMessageLivredor($pseudolivredor, $messagelivredor);
+    
 }
