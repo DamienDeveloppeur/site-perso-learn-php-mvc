@@ -103,21 +103,28 @@ class Member extends Manager
         $pass_hache = password_hash($_POST["newpass"], PASSWORD_DEFAULT);
         
         $newpass = $pass_hache;
-
+      
         if ($isPasswordCorrect)
         {
-            ?>
-            <script>
-                alert("test");
-                </script>
-            <?php
+           
             $req = $bdd->prepare('UPDATE membres SET pass = ? WHERE pseudo = ?');
             $req->execute(array($newpass, $pseudoConnexion));
 
             $req->closeCursor();
-
+            ?>
+            <script>
+                alert("Votre mot de passe à était modifié avec succés");
+                </script>
+            <?php
         }
-
+        else
+        {
+            ?>
+            <script>
+                alert("Erreur dans le changement de mot de passe");
+                </script>
+            <?php
+        }
        
      
     }

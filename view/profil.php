@@ -58,6 +58,7 @@ if(!isset($_SESSION)){
         echo'Pseudo :' .$donnees["pseudo"] . '<br>';
     echo 'Adresse mail :' . $donnees["email"].'<br>';
         echo 'Inscrit le :'. $donnees["date_inscription"];
+       
         echo'<br><br><br>';
         echo 'Avatar :'.'<img src="./public/avatar/'. $donnees['avatar'].'"id="logoprofil"/>';
       }

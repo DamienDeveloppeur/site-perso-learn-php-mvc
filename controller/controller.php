@@ -77,7 +77,8 @@ function modifPass( $pseudoConnexion, $expass, $newpass)
     $changePass = new Member();
     $passChange = $changePass->updatePass( $pseudoConnexion, $expass, $newpass);
     
-    //showDonneesMembre($_SESSION["pseudo"]);
+    showDonneesMembre($_SESSION["pseudo"]);
+    
 }
 
 
