@@ -183,7 +183,8 @@ class Member extends Manager
                                     echo 'Envoi bien réussi ! <br>';
                                 $error = 0;   
                                 var_dump($extensionImage);
-                                var_dump($adress1);      
+                                var_dump($adress1);   
+                                return $adress1;   
                             }
                             else
                             {

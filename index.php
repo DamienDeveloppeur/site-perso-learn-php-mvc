@@ -61,11 +61,8 @@ if (isset($_GET["action"]))
     if ($_GET["action"] == "profil")
     {
      
-
         showDonneesMembre($_SESSION["pseudo"]);
-      
         changeAvatar ($_SESSION["id"].'.'. $extensionImage, $_SESSION["id"]);
-       
         
     }   
     // CHAT

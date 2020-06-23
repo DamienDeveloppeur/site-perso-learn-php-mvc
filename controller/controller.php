@@ -62,8 +62,8 @@ function showDonneesMembre($sessionPseudo)
 function changeAvatar ($adress1, $sessionID)
 {
     $changeAvatar = new Member();
-    $changeAvatar->envoiFichier ($sessionID);
-    $changeAvatar->updateAvatar ($adress1, $sessionID);
+   $adress1 =  $changeAvatar->envoiFichier ($sessionID);
+   $adress1 =  $changeAvatar->updateAvatar ($adress1, $sessionID);
 }
 
 // CHAT //
