@@ -54,7 +54,7 @@ else
 			<div id="connexionF" class="marginTop" >
 			<h1>Connexion</h1>
 				<p>Veuiller entrer votre pseudo et votre mot de passe pour vous connecter</p>
-				  <form method="POST" action="index.php">
+				  <form method="POST" action="index.php?action=connexion">
 				
 				<label>Votre pseudo</label><input type="text" name="pseudo">
 					  <br>

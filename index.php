@@ -35,31 +35,41 @@ if (isset($_GET["navigation"]))
        require "view/modifPass.php";
     }
 }
+// EXECUTION PAR DEFAUT
 else if (!isset($_GET["navigation"]) && (!isset($_GET["action"])))
 {
 
     getOnePage ();
 }
 
-// INSCRIPTION
-if (isset($_POST["pseudo"]) && isset($_POST["pass"])
-&& isset($_POST["pass1"])&& isset($_POST["email"]) && isset($_POST["groupe"]))
-    {
-       register($_POST["pseudo"], $_POST["pass"], $_POST["email"], $_POST["groupe"]);  
-    
-    }
+
 // CONNEXION
-if (isset($_POST["pseudo"]) && isset($_POST["pass"]))
-    {
-     
-        connexion ($_POST["pseudo"], $_POST["pass"]);
-    
-    }
+
 
 // DONNEES TRANSMISES PAR URL
 //~~~~~~~~~~~~~~~~~~~~//
-if (isset($_GET["action"]))
-{
+    if (isset($_GET["action"]))
+    {
+        // INSCRIPTION
+        if ($_GET["action"] == "inscription")
+        {
+            if (isset($_POST["pseudo"]) && isset($_POST["pass"])
+            && isset($_POST["pass1"])&& isset($_POST["email"]) && isset($_POST["groupe"]))
+            {
+            register($_POST["pseudo"], $_POST["pass"], $_POST["email"], $_POST["groupe"]);  
+            
+            }
+      
+        }
+    if ($_GET["action"] == "connexion")
+    {
+        if (isset($_POST["pseudo"]) && isset($_POST["pass"]))
+        {
+        
+            connexion ($_POST["pseudo"], $_POST["pass"]);
+        
+        }
+    }
     // PROFIL / CHANGER AVATAR
     if ($_GET["action"] == "profil")
     {
@@ -97,7 +107,7 @@ if (isset($_GET["action"]))
             }  
     }
 }   
-// EXECUTION PAR DEFAUT
+
 
 
 

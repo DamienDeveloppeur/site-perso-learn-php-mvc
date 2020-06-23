@@ -35,7 +35,7 @@ function connexion ($passConnexion, $pseudoConnexion)
     $connexion = new Register();
     $connex = $connexion->verifyPass($pseudoConnexion, $passConnexion);
        
-       // require "view/onePage.php";
+        require "view/onePage.php";
    
 }
 

@@ -39,13 +39,14 @@ if(!isset($_SESSION)){
     <title>Chat en ligne</title>
 </head>
 <body>
-<div id="minichat">
+<div id="minichat" class="backgroundCommun">
         <?php
 if (isset($_SESSION["id"]) && isset($_SESSION["pseudo"]))
     {
     require "headerC.php";
 
     ?>
+   
         <section class="grandediv white" style="background-image: url(./public/images/photography-of-night-sky-733475.jpg)"data-stellar-background-ratio="0.5">
         <div id="minichat" class="marginTop text-center">
 
@@ -91,6 +92,7 @@ if (isset($_SESSION["id"]) && isset($_SESSION["pseudo"]))
 
     ?>
     </div>
+  
 </div>
 <script src="../public/JS/main">  </script>
        

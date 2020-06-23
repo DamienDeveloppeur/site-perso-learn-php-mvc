@@ -60,7 +60,7 @@ else
       <div class="h1center inscriptionTitle">	
       <h1>Inscription</h1>
         </div>
-		<form method="POST" action="index.php">   
+		<form method="POST" action="index.php?action=inscription">   
             <label>Votre pseudo</label>  
             <input autofocus autocomplete = off type="text" name="pseudo" class="input1">
                         <br>
