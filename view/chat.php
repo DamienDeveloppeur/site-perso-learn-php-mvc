@@ -71,26 +71,28 @@ if (isset($_SESSION["id"]) && isset($_SESSION["pseudo"]))
           
         </div>
     <?php
-   
-    }     
-      
-    $reponse->closeCursor(); 
-    ?>
+    
+        }     
         
-    <?php
-    include("footer.php"); 
-    }
-    else
-    {
-    echo 'Veuillez vous connecter en cliquant <a href="connexion.php" >ici
-    </a> ou t\'inscrire par <a href="inscription.php" >là
-    </a> si ce n\'est pas déjà fait pour accéder au chat';
-    ?>
-    <?php
+        $reponse->closeCursor(); 
+        ?>
+            
+        <?php
+        include("footer.php"); 
         }
+        else
+        {
+        echo 'Veuillez vous connecter en cliquant <a href="connexion.php" >ici
+        </a> ou t\'inscrire par <a href="inscription.php" >là
+        </a> si ce n\'est pas déjà fait pour accéder au chat';
+        ?>
+        <?php
+            }
 
     ?>
     </div>
 </div>
+<script src="../public/JS/main">  </script>
+       
 </body>
 </html>

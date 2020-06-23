@@ -94,11 +94,11 @@ class Register extends Manager
             }
                 else
                 {
-                    echo 't\'es trop debile pour rentrer une adresse mail au bon format ? <br> Degage de mon site !';
+                    echo 'Le format de l\'adresse mail n\'est pas bon';
                 }
     }
 
-    
+
     //verifierMotDePass
    public function verifyPass ($passConnexion, $pseudoConnexion)
     {
