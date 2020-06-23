@@ -4,7 +4,7 @@ include('./model/model.php');
 //~~~~~~~~~~~~~~~~~~~~//
 
 // AFFICHER ONEPAGE
-function getOnePage ()
+function getOnePage()
 {
     require_once('view/onePage.php');
 }

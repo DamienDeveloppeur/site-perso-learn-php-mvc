@@ -22,7 +22,11 @@ if (isset($_GET["navigation"]))
     require "view/onePage.php";
     }
 }
-  
+else
+{
+getOnePage ();
+}
+
 
 
 // INSCRIPTION
@@ -70,10 +74,6 @@ if (isset($_GET["action"]))
     }
 }   
 // EXECUTION PAR DEFAUT
- else
-     {
-    getOnePage ();
-     }
 
 
 
