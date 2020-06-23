@@ -45,7 +45,7 @@ function deconnexion()
     session_destroy();
     $deconnexion = new Member();
     //sessionDestroy();
-
+    require'view/onePage.php';
 }
 // PAGE DE PROFIL
 //~~~~~~~~~~~~~~~~~~~~//
