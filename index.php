@@ -17,9 +17,11 @@ if (isset($_GET["navigation"]))
     {
     require "view/connexion.php";
     }
+    // header('Location: #apropos');
     if ($_GET["navigation"] == "apropos")
     {
-    require "view/onePage.php";
+        header('Location: view/onePage.php#decouvrir');
+    //require "view/onePage.php";
     }
     if ($_GET["navigation"] == "chat")
     {

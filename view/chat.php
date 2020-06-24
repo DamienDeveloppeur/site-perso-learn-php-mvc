@@ -62,7 +62,7 @@ function getMessages()
 {
 // connexion au serveur pour requête ajax
     const requeteAjax = new XMLHttpRequest();
-    requeteAjax.open("GET", "index.php?action");
+    requeteAjax.open("GET", "../../model/Chat.php");
    
    // ../../model/Chat.php
 //../../view/chat.php
