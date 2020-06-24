@@ -75,7 +75,7 @@ class Register extends Manager
                                 VALUES (?,?,?,?, NOW())');
 
                                 $req->execute(array($pseudoRegister, $passRegister, $emailRegister, $IDgroupeRegister));
-                                            echo'çamarchelol';
+                                            
                                             
                                             $control = 1;
                                                 $req->closeCursor(); 
