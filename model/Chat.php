@@ -23,6 +23,12 @@ class Chat extends Manager
         ON chat.pseudo = membres.pseudo
         ORDER BY date_time DESC LIMIT 0, 10
         ');
+
+        // on convertie en format json
+        $messages = $reponse->fetchAll();
+        echo json_encode($messages);
+
+
         return $reponse;
     }
 }

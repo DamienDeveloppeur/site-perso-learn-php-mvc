@@ -57,7 +57,38 @@ if (isset($_SESSION["id"]) && isset($_SESSION["pseudo"]))
             <input type="submit" value="Envoyer"/> 
     </form>
         <h1>Bienvenue à vous sur le chat de mon site personnel</h1>
-        
+        <script> 
+function getMessages()
+{
+// connexion au serveur pour requête ajax
+    const requeteAjax = new XMLHttpRequest();
+    requeteAjax.open("GET", "index.php?action");
+   
+   // ../../model/Chat.php
+//../../view/chat.php
+
+
+    requeteAjax.onload = function()
+    {
+        const resultat = JSON.parse(requeteAjax.responseText);
+        alert(resultat);
+   // const html = resultat.map(function(message)
+  //  {
+  //  return '<div class="message"> <span class="date">${message.created_at.substring(11,16)}</span> <span class="author">${message.author}</span> :<span class="content">${message.content}</span> </div>'
+
+   // }).join('');
+   // const message = document.querySelector('#messagechat');
+
+   // getMessages.innerHTML = html;
+  //  getMessages.scrollTop = messages.scrollHeight;
+      
+    }
+
+  // on envoie la requête
+  requeteAjax.send();  
+
+}
+</script>
         <?php
 
         while ($donnees = $reponse ->fetch())
@@ -65,9 +96,12 @@ if (isset($_SESSION["id"]) && isset($_SESSION["pseudo"]))
             
         ?>
         <div id="messagechat">
+     
              <?php
+
         echo  '<img src="./public/avatar/'. $donnees['avatar'].'"id="logoprofil"/>' 
         . '<p>'. $donnees['pseudo'].' dit: '. $donnees["message"] . '(' . $donnees["date_time"] . ')'. '</p>' ;
+
             ?>
           
         </div>
@@ -94,7 +128,8 @@ if (isset($_SESSION["id"]) && isset($_SESSION["pseudo"]))
     </div>
   
 </div>
-<script src="../public/JS/main">  </script>
+
+<script src="./public/JS/main.js">  </script>
        
 </body>
 </html>
