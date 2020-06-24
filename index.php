@@ -6,39 +6,15 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 // NAVIGATION
+
 if (isset($_GET["navigation"]))
 {
-    if ($_GET["navigation"] == "inscription")
-    {
-    require "view/inscription.php";
-    }
+   $view =  $_GET["navigation"];
 
-    if ($_GET["navigation"] == "connexion")
-    {
-    require "view/connexion.php";
-    }
-    if ($_GET["navigation"] == "apropos")
-    {
-    require "view/onePage.php";
-    }
-    if ($_GET["navigation"] == "chat")
-    {
-          $reponse = showMessageChat();
-    }
-    if ($_GET["navigation"] == "profil")
-    {
-        showDonneesMembre($_SESSION["pseudo"]);
-    }
-    if ($_GET["navigation"] == "modifPass")
-    {
-
-       require "view/modifPass.php";
-    }
+   require "view/". $view . ".php";
 }
-// EXECUTION PAR DEFAUT
-else if (!isset($_GET["navigation"]) && (!isset($_GET["action"])))
+else
 {
-
     getOnePage ();
 }
 
@@ -114,4 +90,34 @@ else if (!isset($_GET["navigation"]) && (!isset($_GET["action"])))
    
     
 
-  
+  /*
+if (isset($_GET["navigation"]))
+{
+    if ($_GET["navigation"] == "inscription")
+    {
+    require "view/inscription.php";
+    }
+
+    if ($_GET["navigation"] == "connexion")
+    {
+    require "view/connexion.php";
+    }
+    if ($_GET["navigation"] == "apropos")
+    {
+    require "view/onePage.php";
+    }
+    if ($_GET["navigation"] == "chat")
+    {
+          $reponse = showMessageChat();
+    }
+    if ($_GET["navigation"] == "profil")
+    {
+        showDonneesMembre($_SESSION["pseudo"]);
+    }
+    if ($_GET["navigation"] == "modifPass")
+    {
+
+       require "view/modifPass.php";
+    }
+}
+*/
