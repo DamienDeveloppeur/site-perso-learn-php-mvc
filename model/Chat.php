@@ -29,7 +29,7 @@ class Chat
 
         // on convertie en format json
         $messages = $reponse->fetchAll();
-        json_encode($messages);
+       echo json_encode($messages);
 
 
       
