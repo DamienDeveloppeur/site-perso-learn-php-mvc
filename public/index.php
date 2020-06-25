@@ -1,25 +1,26 @@
 <?php
 
-include ("controller/controller.php");
+include ("../controller/controller.php");
 // SI LA SESSION N'EXISTE PAS => ON LA CREE
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+
 // NAVIGATION
 if (isset($_GET["navigation"]))
 {
     if ($_GET["navigation"] == "inscription")
     {
-    require "view/inscription.php";
+    require "../view/inscription.php";
     }
 
     if ($_GET["navigation"] == "connexion")
     {
-    require "view/connexion.php";
+    require "../view/connexion.php";
     }
     if ($_GET["navigation"] == "apropos")
     {
-    require "view/onePage.php";
+    require "../view/onePage.php";
     }
     if ($_GET["navigation"] == "chat")
     {
@@ -32,7 +33,7 @@ if (isset($_GET["navigation"]))
     if ($_GET["navigation"] == "modifPass")
     {
 
-       require "view/modifPass.php";
+       require "../view/modifPass.php";
     }
 }
 // EXECUTION PAR DEFAUT

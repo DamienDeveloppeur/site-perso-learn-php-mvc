@@ -2,7 +2,7 @@
 
 function chargerClasse($classe)
 {
-  require './model/'. $classe . '.php'; // On inclut la classe correspondante au paramètre passé.
+  require '../model/'. $classe . '.php'; // On inclut la classe correspondante au paramètre passé.
 }
 spl_autoload_register('chargerClasse'); 
 
@@ -12,12 +12,12 @@ spl_autoload_register('chargerClasse');
 // AFFICHER ONEPAGE
 function getOnePage ()
 {
-    require_once('view/onePage.php');
+    require_once('../view/onePage.php');
 }
 // AFFICHE LE FORMULAIRE D'INSCRIPTION
 function getIndexEspaceMembre()
 {
-    require('view/inscription.php');
+    require('../view/inscription.php');
 }
 // INSCRIPTION / CONNEXION / DECONNEXION
 //~~~~~~~~~~~~~~~~~~~~//
@@ -26,7 +26,7 @@ function register ($pseudoRegister, $passRegister, $emailRegister, $IDgroupeRegi
 {
     $register = new Register();
   $registers = $register->entryDonneesRegister($pseudoRegister, $passRegister, $emailRegister, $IDgroupeRegister);
-   include("view/connexion.php");
+   include("../view/connexion.php");
 }
 
 //CONNEXION
@@ -35,7 +35,7 @@ function connexion ($passConnexion, $pseudoConnexion)
     $connexion = new Register();
     $connex = $connexion->verifyPass($pseudoConnexion, $passConnexion);
        
-        require "view/onePage.php";
+        require "../view/onePage.php";
    
 }
 
@@ -45,7 +45,7 @@ function deconnexion()
     session_destroy();
     $deconnexion = new Member();
     //sessionDestroy();
-    require'view/onePage.php';
+    require'../view/onePage.php';
 }
 
 
@@ -60,7 +60,7 @@ function showDonneesMembre($sessionPseudo)
 {
     $showDonneesMembre = new Member();
     $reponse = $showDonneesMembre->lireDonneesMembre ($sessionPseudo);
-    require_once "view/profil.php";
+    require_once "../view/profil.php";
 }
 
 // CHANGER AVATAR
@@ -99,7 +99,7 @@ function showMessageChat()
 {
     $showMessageChat = new Chat();
     $reponse =  $showMessageChat->jointureChat();
-    require "view/chat.php";
+    require "../view/chat.php";
 }
 
 // LIVRE D'OR //
@@ -109,7 +109,7 @@ function messageLivredor()
     $messageLivredor = new MessageManager();
     $reponse = $messageLivredor->showMessageLivredor();
     
-    require 'view/livredor.php';
+    require '../view/livredor.php';
 }
 function addMessageLivredor($pseudolivredor, $messagelivredor)
 {

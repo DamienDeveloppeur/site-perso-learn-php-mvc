@@ -1,5 +1,5 @@
 <?php
-require 'model/Manager.php';
+require '../model/Manager.php';
 class Chat extends Manager 
 {
        

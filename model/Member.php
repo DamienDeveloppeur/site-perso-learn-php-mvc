@@ -1,6 +1,6 @@
 <?php
 
-require 'model/Manager.php';
+require '../model/Manager.php';
 class Member extends Manager 
 {
 
