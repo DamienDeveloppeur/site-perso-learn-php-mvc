@@ -58,36 +58,36 @@ if (isset($_SESSION["id"]) && isset($_SESSION["pseudo"]))
     </form>
         <h1>Bienvenue à vous sur le chat de mon site personnel</h1>
         <script> 
-function getMessages()
-{
-// connexion au serveur pour requête ajax
-    const requeteAjax = new XMLHttpRequest();
-    requeteAjax.open("GET", "../../model/Chat.php");
-   
-   // ../../model/Chat.php
-//../../view/chat.php
+  
+  function getMessages(){
+  // 1. Elle doit créer une requête AJAX pour se connecter au serveur, et notamment au fichier handler.php
+  const requeteAjax = new XMLHttpRequest();
+  requeteAjax.open("GET", "./model/Chat.php");
 
+  // 2. Quand elle reçoit les données, il faut qu'elle les traite (en exploitant le JSON) et il faut qu'elle affiche ces données au format HTML
+  requeteAjax.onload = function(){
+    const resultat = requeteAjax.responseText;
+    alert(resultat);
+    const html = resultat.reverse().map(function(message){
+      return `
+        <div class="message">
+          <span class="date">${message.created_at.substring(11, 16)}</span>
+          <span class="author">${message.author}</span> : 
+          <span class="content">${message.content}</span>
+        </div>
+      `
+    }).join('');
 
-    requeteAjax.onload = function()
-    {
-        const resultat = JSON.parse(requeteAjax.responseText);
-        alert(resultat);
-   // const html = resultat.map(function(message)
-  //  {
-  //  return '<div class="message"> <span class="date">${message.created_at.substring(11,16)}</span> <span class="author">${message.author}</span> :<span class="content">${message.content}</span> </div>'
+    const messages = document.querySelector('#messagechat');
 
-   // }).join('');
-   // const message = document.querySelector('#messagechat');
+    messages.innerHTML = html;
+    messages.scrollTop = messages.scrollHeight;
+  }
 
-   // getMessages.innerHTML = html;
-  //  getMessages.scrollTop = messages.scrollHeight;
-      
-    }
-
-  // on envoie la requête
-  requeteAjax.send();  
-
+  // 3. On envoie la requête
+  requeteAjax.send();
 }
+     
 </script>
         <?php
 
@@ -98,10 +98,10 @@ function getMessages()
         <div id="messagechat">
      
              <?php
-
+/*
         echo  '<img src="./public/avatar/'. $donnees['avatar'].'"id="logoprofil"/>' 
         . '<p>'. $donnees['pseudo'].' dit: '. $donnees["message"] . '(' . $donnees["date_time"] . ')'. '</p>' ;
-
+*/
             ?>
           
         </div>

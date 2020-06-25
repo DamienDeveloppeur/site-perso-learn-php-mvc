@@ -1,13 +1,14 @@
 <?php
-require 'model/Manager.php';
-class Chat extends Manager 
+
+class Chat
 {
        
     // AJOUTER UN MESSAGE
     function addMessage ($pseudoSession, $message)
     {
+        $bdd = new PDO('mysql:host=localhost;dbname=espacemembres;
+        charset=utf8', 'root', '');
         
-        $bdd = $this->dbConnect();
         $reponse = $bdd->prepare('INSERT INTO chat (pseudo, message, date_time) VALUES (?,?, NOW())');
         $reponse->execute(array($pseudoSession, $message));
        
@@ -15,7 +16,9 @@ class Chat extends Manager
     // JOINTURE CHAT
     function jointureChat()
     {
-        $bdd =  $this->dbConnect();
+        $bdd = new PDO('mysql:host=localhost;dbname=espacemembres;
+        charset=utf8', 'root', '');
+        
         $reponse = $bdd->query('SELECT chat.message, chat.pseudo, chat.date_time,
         membres.pseudo,  membres.avatar
         FROM chat
@@ -26,43 +29,9 @@ class Chat extends Manager
 
         // on convertie en format json
         $messages = $reponse->fetchAll();
-        echo json_encode($messages);
+        json_encode($messages);
 
 
       
     }
 }
-?>
-<script> 
-function getMessages()
-{
-// connexion au serveur pour requête ajax
-    const requeteAjax = new XMLHttpRequest();
-    requeteAjax.open("GET", "index.php");
-   
-   // ../../model/Chat.php
-//../../view/chat.php
-
-
-    requeteAjax.onload = function()
-    {
-        const resultat = JSON.parse(requeteAjax.responseText);
-        alert(resultat);
-   // const html = resultat.map(function(message)
-  //  {
-  //  return '<div class="message"> <span class="date">${message.created_at.substring(11,16)}</span> <span class="author">${message.author}</span> :<span class="content">${message.content}</span> </div>'
-
-   // }).join('');
-   // const message = document.querySelector('#messagechat');
-
-   // getMessages.innerHTML = html;
-  //  getMessages.scrollTop = messages.scrollHeight;
-      
-    }
-
-  // on envoie la requête
-  requeteAjax.send();  
-
-}
-</script>
-<?php
